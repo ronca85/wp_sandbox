@@ -1,0 +1,34 @@
+
+.o-icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: rem(24px);
+	height: rem(24px);
+
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// if needed add size variations below
+
+.o-icon {
+	&.-unit {
+		width: rem($unit);
+		height: rem($unit);
+	}
+	&.-unit\@to-medium {
+		@media (max-width: $to-medium) {
+			width: rem($unit);
+			height: rem($unit);
+		}
+	}
+	&.-unit\@from-medium {
+		@media (min-width: $from-tiny) {
+			width: rem($unit);
+			height: rem($unit);
+		}
+	}
+}

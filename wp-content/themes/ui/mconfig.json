@@ -1,0 +1,42 @@
+{
+  "src": "./loco_src/",
+  "dest": "./loco_dist/",
+  "docs": {
+    "src": "./src/",
+    "dest": "./"
+  },
+  "build": "./loco_build/",
+  "styles": {
+    "src": "./loco_src/",
+    "dest": "./loco_dist/",
+    "main": "locomotive-scroll",
+    "docs": {
+      "src": "./src/styles/",
+      "dest": "./dist/styles/",
+      "main": "main"
+    }
+  },
+  "scripts": {
+    "src": "./loco_src/",
+    "dest": "./loco_dist/",
+    "main": "locomotive-scroll",
+    "docs": {
+      "src": "./src/scripts/",
+      "dest": "./dist/scripts/",
+      "main": "main"
+    }
+  },
+  "svgs": {
+    "src": "./src/images/sprite/",
+    "dest": "./dist/images/"
+  },
+  "views": {
+    "src": "./"
+  },
+  "modules": {
+    "build": "gulp",
+    "style": "sass",
+    "script": "js",
+    "view": false
+  }
+}

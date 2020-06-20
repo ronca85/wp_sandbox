@@ -1,0 +1,83 @@
+
+.o-vertical-lines {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity: .11;
+	z-index: 1;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.o-vertical-lines_line {
+	position: relative;
+	height: 100%;
+}
+
+.o-vertical-lines_line::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-right: 1px solid #000;
+}
+
+@media (max-width: $to-medium) {
+	.o-vertical-lines_line {
+		width: 33.3333333333%;
+	}
+
+	.o-vertical-lines_line:nth-child(4),
+	.o-vertical-lines_line:nth-child(5),
+	.o-vertical-lines_line:nth-child(6) {
+		display: none;
+	}
+}
+
+@media (min-width: $from-medium) {
+	.o-vertical-lines_line {
+		width:16.6666666667%
+	}
+}
+
+.o-vertical-lines_line:last-child::after {
+	display: none
+}
+
+.o-vertical-lines.-loader .o-vertical-lines_line {
+	background-color: #1c2d4f;
+	transition: transform .6s cubic-bezier(.4,0,0,1);
+	transform: scaleY(1) translateY(0);
+	transform-origin: center top;
+}
+
+.o-vertical-lines.-loader .o-vertical-lines_line::after {
+	opacity: .11;
+}
+
+.o-vertical-lines.-loader .o-vertical-lines_line:nth-child(1) {
+	transition-delay: 90ms;
+}
+
+.o-vertical-lines.-loader .o-vertical-lines_line:nth-child(2) {
+	transition-delay: .18s
+}
+
+.o-vertical-lines.-loader .o-vertical-lines_line:nth-child(3) {
+	transition-delay: .27s
+}
+
+.o-vertical-lines.-loader .o-vertical-lines_line:nth-child(4) {
+	transition-delay: .36s
+}
+
+.o-vertical-lines.-loader .o-vertical-lines_line:nth-child(5) {
+	transition-delay: .45s
+}
+
+.o-vertical-lines.-loader .o-vertical-lines_line:nth-child(6) {
+	transition-delay: .54s
+}

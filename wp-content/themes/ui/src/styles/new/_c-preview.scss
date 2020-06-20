@@ -1,0 +1,116 @@
+.c-preview {
+	background: linear-gradient(white, pink, white);
+	display: flex;
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+}
+
+.c-preview_image-wrap {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 100%;
+
+	@media (min-width: $from-tiny) and (max-width: $to-medium) {
+		padding-bottom: 75%;
+	}
+
+	@media (min-width: $from-medium) {
+		padding-bottom: 45%;
+	}
+}
+
+.c-preview_image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: 50%;
+}
+
+.c-preview_image_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(180deg, rgba(51,51,51,0.3) 0%, rgba(51,51,51,0) 100%);
+	height: 33.3333%;
+	width: 100%;
+}
+
+.c-preview_media {
+	position: relative;
+}
+
+.c-preview_categories {
+	margin-left: 1rem;
+	margin-right: 1rem;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+}
+
+.c-preview_categories_list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+	margin-left: -1rem;
+	margin-bottom: -1rem;
+}
+
+.c-preview_categories_list_item {
+	padding-left: 1rem;
+	margin-bottom: 1rem;
+	white-space: nowrap;
+}
+
+.c-preview_categories_list_item_label {
+	display: block;
+}
+
+.c-preview_content {
+	background-color: red;
+	padding-top: rem(10px);
+	height: 100%;
+	transition: background-color 0.3s $easing;
+
+	.c-preview:hover > & {
+		background-color: white;
+	}
+}
+
+.c-preview_content_inner {
+	padding: rem(16px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.c-preview_content_title {
+	color: green;
+	font-size: rem(21px);
+	font-weight: bold;
+	line-height: rem(30px);
+}
+
+.c-preview_content_footer {
+	display: flex;
+	align-items: flex-end;
+	margin-top: rem(24px);
+}
+
+.c-preview_content_footer_info {
+	color: green;
+	font-size: rem(14px);
+	line-height: rem(22px);
+	width: 65%;
+}
+
+.c-preview_content_footer_arrow {
+	width: 35%;
+	text-align: right;
+}
