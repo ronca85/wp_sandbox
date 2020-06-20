@@ -96,11 +96,11 @@
 						</p>
 
 						<h2>try searching again</h2>
-						<?php get_search_form();
-
-					endif; ?>
+						<?php get_search_form(); ?>
 					</div><!-- ends .o-container -->
 				</section>
+				
+				<?php endif; ?>
 				
 				<?php get_footer(); ?>
 
