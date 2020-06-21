@@ -1,9 +1,10 @@
 
 .o-icon {
+	border: 1px solid white; // for testing alignment only
 	display: inline-block;
 	vertical-align: middle;
-	width: rem(24px);
-	height: rem(24px);
+	width: em(24px);
+	height: em(24px);
 
 	svg {
 		display: block;

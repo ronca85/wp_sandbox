@@ -1,0 +1,59 @@
+// ==========================================================================
+// Objects / Background
+// ==========================================================================
+.o-bg {
+	position: relative;
+	z-index: 1;
+
+	&:before {
+		content:"";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background-color: white;
+		z-index: -1;
+		transition: transform .7s $easing;
+	}
+
+	&:hover {
+		&:before {
+			transition: transform .2s $easing;
+		}
+	}
+}
+// ==========================================================================
+.o-bg-move-to-bottom {
+
+	@extend .o-bg;
+
+	&:before {
+		transform: scaleY(0);
+		transform-origin: center bottom;
+	}
+
+	&:hover {
+		&:before {
+			transform: scaleY(1);
+			transform-origin: center top;
+		}
+	}
+}
+// ==========================================================================
+.o-bg-move-to-right {
+
+	@extend .o-bg;
+
+	&:before {
+		transform: scaleX(0);
+		transform-origin: right center;
+	}
+
+	&:hover {
+		&:before {
+			transform: scaleX(1);
+			transform-origin: left center;
+		}
+	}
+}

@@ -19,15 +19,15 @@ html {
     line-height: $line-height; /* [1] */
 
     @media (max-width: $to-small) {
-        font-size: 12px;
+        font-size: rem(12px);
     }
 
     @media (min-width: $from-small) and (max-width: $to-medium) {
-        font-size: 13px;
+        font-size: rem(13px);
     }
 
     @media (min-width: $from-medium) and (max-width: $to-large) {
-        font-size: 14px;
+        font-size: rem(14px);
     }
 
     @media (min-width: $from-large) and (max-width: $to-huge) {
@@ -35,15 +35,15 @@ html {
     }
 
     @media (min-width: $from-huge) and (max-width: $to-gigantic) {
-        font-size: 18px;
+        font-size: rem(18px);
     }
 
     @media (min-width: $from-gigantic) and (max-width: $to-colossal) {
-        font-size: 21px;
+        font-size: rem(21px);
     }
 
     @media (min-width: $from-colossal) {
-        font-size: 24px;
+        font-size: rem(24px);
     }
 
     &:not(.has-scroll-init) {

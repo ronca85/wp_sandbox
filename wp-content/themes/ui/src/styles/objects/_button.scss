@@ -5,43 +5,33 @@
     position: relative;
     z-index: 1;
     color: white;
-    padding: rem(32px) rem(35px);
-    font-size: rem(24px);
-    background-color: $black;
-    transition: color 0.3s $easing;
-    width: 100%;
-    text-align: left;
+    background-color: black;
+    transition: background-color 0.3s $easing, color 0.3s $easing;
 
-    &::before{
-        content:"";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        z-index: -1;
-        transform: scaleY(0);
-        transform-origin: center top;
-        background-color: $white;
-        transition: transform 0.3s $easing;
-    }
+    // set base value for buttons
+    padding: rem(12px) rem(12px) rem(14px);
 
+    // use font size in em or % to scale button text and icons
+    
+    // use helper (utility) classes for width, alignment, etc.
+    // because the button style changes too much depending on where it is used on the page
 
     @include u-hocus {
-        color: $black;
-
-        &::before {
-            transform: scaleY(1);
-            transform-origin: center bottom;
-        }
+        color: black;
+        background-color: white;
     }
 }
 
-.o-button_icon {
+.o-button_label {
+    border: 1px solid white; // for testing alignment only
+    vertical-align: inherit;
+}
+
+.o-button_icon { // may throw this out
     display: inline-block;
     vertical-align: middle;
-    width: rem(55px);
-    height: rem(55px);
+    width: rem($unit);
+    height: rem($unit);
     margin-right: rem($unit / 4);
 
     svg {

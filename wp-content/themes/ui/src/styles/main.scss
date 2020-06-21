@@ -31,27 +31,6 @@
 @import "elements/page";
 @import "elements/headings";
 
-// Page
-// ==========================================================================
-@import "page/header";
-@import "page/footer";
-
-// ==========================================================================
-// New
-// ==========================================================================
-@import "new/screenreader";
-@import "new/accessibility";
-@import "new/testing";
-@import "new/header-navigation";
-@import "new/c-svg";
-@import "new/o-link";
-@import "new/c-nav";
-@import "new/c-nav-huge";
-@import "new/c-preview";
-@import "new/o-list";
-@import "new/o-icon";
-@import "new/o-quotemark";
-
 // Objects
 // ==========================================================================
 @import "objects/container";
@@ -59,6 +38,7 @@
 @import "objects/layout";
 @import "objects/form";
 @import "objects/button";
+@import "objects/o-bg";
 @import "objects/scroll";
 @import "objects/title";
 @import "objects/image";
@@ -99,3 +79,25 @@
 // @import "utilities/headings";
 // @import "utilities/spacing";
 // @import "utilities/print";
+
+
+// Page
+// ==========================================================================
+@import "page/header";
+@import "page/footer";
+
+// ==========================================================================
+// New
+// ==========================================================================
+@import "new/screenreader";
+@import "new/accessibility";
+@import "new/testing";
+@import "new/header-navigation";
+@import "new/c-svg";
+@import "new/o-link";
+@import "new/c-nav";
+@import "new/c-nav-huge";
+@import "new/c-preview";
+@import "new/o-list";
+@import "new/o-icon";
+@import "new/o-quotemark";

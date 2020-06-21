@@ -98,3 +98,13 @@
 .u-screen-reader-text.-focusable {
     @include u-accessibly-focusable;
 }
+
+
+
+
+.u-rounded {
+    border-radius: 9999px;
+}
+.u-overflow-hidden {
+    overflow: hidden;
+}

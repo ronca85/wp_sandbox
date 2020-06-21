@@ -10,7 +10,7 @@ Template Name: Archives
 
 		<div data-barba="container" data-barba-namespace="archive">
 			<div class="o-scroll" id="js-scroll" data-scroll-container>
-				<p>Template Name: Archives</p>
+				<p>Template Name - Archives</p>
 
 				<?php
 					if ( have_posts() ) :
