@@ -1,5 +1,5 @@
 import LocomotiveScroll from '../../loco_src/locomotive-scroll';
-// import './barbajs_config';
+import './barbajs_config';
 // import './myscripts';
 
 (function() {
