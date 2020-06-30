@@ -9,9 +9,8 @@
 	<main data-barba="wrapper">
 
 		<div data-barba="container" data-barba-namespace="homepage">
+			
 			<div class="o-scroll" id="js-scroll" data-scroll-container>
-
-				<?php get_template_part( 'partials/new/transition-lines'); ?>
 
 				<?php get_template_part( 'partials/new/homepage/hero'); ?>
 
@@ -260,7 +259,7 @@
 					</div>
 				</section>
 
-			<?php get_footer(); ?>
+				<?php get_footer(); ?>
 
 			</div>
 		</div>

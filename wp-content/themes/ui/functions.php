@@ -305,7 +305,7 @@ function tempnav() {
       $delay = $key + 1;
       $title = $menu_item->title;
       $url = $menu_item->url;
-      $menu_list .= "\t\t\t\t\t". '<li style="display: inline-block; margin-right: 1rem;"><a href="'. $url .'" data-route="menu" id="webaim-primary-nav">'. $title .'</a></li>' ."\n";
+      $menu_list .= "\t\t\t\t\t". '<li style="display: inline-block; margin-right: 1rem;"><a href="'. $url .'" data-route="menu">'. $title .'</a></li>' ."\n";
     }
     $menu_list .= "\t\t\t\t". '</ul>' ."\n";
     $menu_list .= "\t\t\t". '</nav>' ."\n";

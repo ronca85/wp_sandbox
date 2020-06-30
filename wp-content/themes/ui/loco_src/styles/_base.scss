@@ -1,7 +1,8 @@
 html {
-    &.has-scroll-smooth {
-        overflow: hidden;
-    }
+    overflow: hidden;
+    // &.has-scroll-smooth {
+    //     overflow: hidden;
+    // }
 
     &.has-scroll-dragging {
         user-select: none;

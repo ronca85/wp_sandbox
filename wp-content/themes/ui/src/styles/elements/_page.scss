@@ -46,10 +46,10 @@ html {
         font-size: rem(24px);
     }
 
-    &:not(.has-scroll-init) {
-        cursor: wait;
-        overflow: hidden;
-    }
+    // &:not(.has-scroll-init) {
+    //     cursor: wait;
+    //     overflow: hidden;
+    // }
 }
 
 ::selection {

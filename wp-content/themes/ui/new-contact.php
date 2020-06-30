@@ -9,9 +9,8 @@
 	<main data-barba="wrapper">
 
 		<div data-barba="container" data-barba-namespace="contact">
-			<div class="o-scroll" id="js-scroll" data-scroll-container>
 
-				<?php get_template_part( 'partials/new/transition-lines'); ?>
+			<div class="o-scroll" id="js-scroll" data-scroll-container>
 
 				<?php get_template_part( 'partials/new/contact/hero'); ?>
 

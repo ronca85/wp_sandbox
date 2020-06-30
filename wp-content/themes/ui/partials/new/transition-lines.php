@@ -1,8 +1,8 @@
-<ul class="o-vertical-lines o-layout || js-transition-lines">
-	<li class="o-vertical-lines_line o-layout_item"></li>
-	<li class="o-vertical-lines_line o-layout_item"></li>
-	<li class="o-vertical-lines_line o-layout_item"></li>
-	<li class="o-vertical-lines_line o-layout_item"></li>
-	<li class="o-vertical-lines_line o-layout_item"></li>
-	<li class="o-vertical-lines_line o-layout_item"></li>
-</ul>
+<div class="o-transition-lines -loader o-layout">
+	<div class="o-transition-lines_item o-layout_item"></div>
+	<div class="o-transition-lines_item o-layout_item"></div>
+	<div class="o-transition-lines_item o-layout_item"></div>
+	<div class="o-transition-lines_item o-layout_item"></div>
+	<div class="o-transition-lines_item o-layout_item"></div>
+	<div class="o-transition-lines_item o-layout_item"></div>
+</div>
