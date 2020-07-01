@@ -56,14 +56,16 @@ barba.init({
 			afterOnce( data ) {
 				// console.log("after once", data.next.container);
 				document.documentElement.classList.remove("dom-is-loading");
+				document.documentElement.classList.add("dom-is-loaded");
 				setTimeout(function() {
-					document.documentElement.classList.add("dom-is-loaded");
+					document.documentElement.classList.add("dom-is-animated");
 				}, 1050)
 			},
 
 			leave( data ) {
 				// console.log("L E A V E", data.current.container);
 				document.documentElement.classList.remove("dom-is-loaded");
+				document.documentElement.classList.remove("dom-is-animated");
 				document.documentElement.classList.add("dom-is-loading");
 			},
 
@@ -85,6 +87,7 @@ barba.init({
 				document.documentElement.classList.remove("dom-is-loading");
 				setTimeout(function() {
 					document.documentElement.classList.add("dom-is-loaded");
+					document.documentElement.classList.add("dom-is-animated");
 				}, 1050)
 			},
 		},

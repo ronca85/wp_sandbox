@@ -1,0 +1,67 @@
+
+.o-loader {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1100;
+	font-size: 0;
+	text-align: center;
+	visibility: hidden;
+	transition: visibility 0s .6s
+}
+
+.o-loader::before {
+	display: inline-block;
+	height: 100%;
+	content: "";
+	vertical-align: middle
+}
+
+.o-loader>* {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1rem
+}
+
+.dom-is-loading .o-loader,.is-first .o-loader {
+	transition-delay: .3s;
+	visibility: visible
+}
+
+.o-loader_wrap {
+	position: relative;
+	width: 9.75rem;
+	height: 9.75rem;
+	overflow: hidden;
+	transition: transform .3s cubic-bezier(.4,0,0,1),opacity .15s cubic-bezier(.4,0,0,1);
+	z-index: 2;
+	display: none
+}
+
+.is-first .o-loader_wrap {
+	display: inline-block
+}
+
+.o-loader_wrap path,.o-loader_wrap svg {
+	stroke: #fff;
+	fill: #fff
+}
+
+.o-loader_img {
+	width: 6.875rem;
+	height: 6.875rem
+}
+
+.has-loaded-spinner .o-loader_img {
+	visibility: hidden
+}
+
+.o-loader_spinner {
+	position: absolute;
+	top: -2.75rem;
+	right: 0;
+	bottom: 0;
+	left: 0
+}

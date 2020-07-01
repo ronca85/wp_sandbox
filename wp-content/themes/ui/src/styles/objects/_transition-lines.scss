@@ -22,65 +22,92 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
-	border-right: 10px solid #000;
+	border-right: 3vw solid white;
 }
 
 @media (max-width: $to-medium) {
 	.o-transition-lines_item {
 		width: 33.3333333333%;
-	}
 
-	.o-transition-lines_item:nth-child(4),
-	.o-transition-lines_item:nth-child(5),
-	.o-transition-lines_item:nth-child(6) {
-		display: none;
+		@for $i from 4 through 18 {
+			&:nth-child(#{$i}){
+				display: none;
+			}
+		}
 	}
 }
 
 @media (min-width: $from-medium) {
 	.o-transition-lines_item {
-		width:16.6666666667%
+		// width: 16.6666666667%
+		width: 5.5555555556%;
 	}
 }
 
 .o-transition-lines_item:last-child::after {
-	display: none
+	// display: none
 }
 
+
+
+
+
+
+
+.o-transition-lines.-loader {
+	z-index: 1000;
+	opacity: 1;
+	pointer-events: auto;
+	transition: visibility 0s;
+}
+
+
+
+
+
+
+
+
 .o-transition-lines.-loader .o-transition-lines_item {
-	background-color: #1c2d4f;
+	background-color: #da2f5a;
 	transition: transform .6s cubic-bezier(.4,0,0,1);
 	transform: scaleY(1) translateY(0);
 	transform-origin: center top;
+
+	@for $i from 1 through 18 {
+		&:nth-child(#{$i}){
+			transition-delay: $i*0.03s;
+		}
+	}
 }
 
 .o-transition-lines.-loader .o-transition-lines_item::after {
-	opacity: .11;
+	// opacity: .11;
 }
 
-.o-transition-lines.-loader .o-transition-lines_item:nth-child(1) {
-	transition-delay: 90ms;
-}
+// .o-transition-lines.-loader .o-transition-lines_item:nth-child(1) {
+// 	transition-delay: 90ms;
+// }
 
-.o-transition-lines.-loader .o-transition-lines_item:nth-child(2) {
-	transition-delay: .18s
-}
+// .o-transition-lines.-loader .o-transition-lines_item:nth-child(2) {
+// 	transition-delay: .18s
+// }
 
-.o-transition-lines.-loader .o-transition-lines_item:nth-child(3) {
-	transition-delay: .27s
-}
+// .o-transition-lines.-loader .o-transition-lines_item:nth-child(3) {
+// 	transition-delay: .27s
+// }
 
-.o-transition-lines.-loader .o-transition-lines_item:nth-child(4) {
-	transition-delay: .36s
-}
+// .o-transition-lines.-loader .o-transition-lines_item:nth-child(4) {
+// 	transition-delay: .36s
+// }
 
-.o-transition-lines.-loader .o-transition-lines_item:nth-child(5) {
-	transition-delay: .45s
-}
+// .o-transition-lines.-loader .o-transition-lines_item:nth-child(5) {
+// 	transition-delay: .45s
+// }
 
-.o-transition-lines.-loader .o-transition-lines_item:nth-child(6) {
-	transition-delay: .54s
-}
+// .o-transition-lines.-loader .o-transition-lines_item:nth-child(6) {
+// 	transition-delay: .54s
+// }
 
 @media print {
 	.o-transition-lines {
@@ -99,32 +126,38 @@
 }
 
 .dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item {
-	transform: scaleY(0) translateY(0)
+	transform: scaleY(0) translateY(0);
+
+	@for $i from 1 through 18 {
+		&:nth-child(#{$i}){
+			transition-delay: $i*0.03s;
+		}
+	}
 }
 
-.dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(1) {
-	transition-delay: .45s
-}
+// .dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(1) {
+// 	transition-delay: .45s
+// }
 
-.dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(2) {
-	transition-delay: .36s
-}
+// .dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(2) {
+// 	transition-delay: .36s
+// }
 
-.dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(3) {
-	transition-delay: .27s
-}
+// .dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(3) {
+// 	transition-delay: .27s
+// }
 
-.dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(4) {
-	transition-delay: .18s
-}
+// .dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(4) {
+// 	transition-delay: .18s
+// }
 
-.dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(5) {
-	transition-delay: 90ms
-}
+// .dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(5) {
+// 	transition-delay: 90ms
+// }
 
-.dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(6) {
-	transition-delay: 0s
-}
+// .dom-is-loaded .o-transition-lines.-loader .o-transition-lines_item:nth-child(6) {
+// 	transition-delay: 0s
+// }
 
 .dom-is-animated .o-transition-lines.-loader .o-transition-lines_item {
 	transform: scaleY(1) translateY(100%);
